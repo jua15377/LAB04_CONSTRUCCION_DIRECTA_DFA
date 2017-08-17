@@ -1,9 +1,19 @@
+import java.util.HashSet;
+
 public class Nodo {
     private String simobolo;
     private Nodo hijoDerecho;
     private Nodo hijoIzquierdo;
     private Nodo hijo;
     private int id;
+    private HashSet<Nodo> firstpos = new HashSet<>();
+    private boolean isNullable;
+    private HashSet<Nodo> lastpos = new HashSet<>();
+    private HashSet<Nodo> followpos = new HashSet<>();
+
+
+
+
     //constructor para una hoja conun simbolo del alfabeto
     public Nodo(String simobolo, int id){
         this.simobolo = simobolo;
@@ -60,6 +70,38 @@ public class Nodo {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public HashSet<Nodo> getFirstpos() {
+        return firstpos;
+    }
+
+    public void setFirstpos(HashSet<Nodo> firstpos) {
+        this.firstpos = firstpos;
+    }
+
+    public boolean isNullable() {
+        return isNullable;
+    }
+
+    public void setNullable(boolean nullable) {
+        this.isNullable = nullable;
+    }
+
+    public HashSet<Nodo> getLastpos() {
+        return lastpos;
+    }
+
+    public void setLastpos(HashSet<Nodo> lastpos) {
+        this.lastpos = lastpos;
+    }
+
+    public HashSet<Nodo> getFollowpos() {
+        return followpos;
+    }
+
+    public void setFollowpos(HashSet<Nodo> followpos) {
+        this.followpos = followpos;
     }
 
     @Override
